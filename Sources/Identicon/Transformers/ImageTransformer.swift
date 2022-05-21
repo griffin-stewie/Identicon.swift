@@ -93,7 +93,7 @@ extension ImageTransformer {
 
     private func gridInfo(length: Int, count: Int) -> (size: NSSize, reminder: Int) {
         let reminder = length % count
-        let size = (1024 - reminder) / count
+        let size = (length - reminder) / count
 
         return (size: NSSize(width: size, height: size), reminder: reminder)
     }
